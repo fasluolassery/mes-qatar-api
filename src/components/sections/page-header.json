@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_sections_page_headers",
+  "info": {
+    "displayName": "Page Header",
+    "icon": "heading",
+    "description": "High-end institutional header for archive and standard pages"
+  },
+  "options": {},
+  "attributes": {
+    "tagline": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

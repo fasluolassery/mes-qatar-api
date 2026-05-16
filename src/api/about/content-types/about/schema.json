@@ -1,0 +1,27 @@
+{
+  "kind": "singleType",
+  "collectionName": "abouts",
+  "info": {
+    "singularName": "about",
+    "pluralName": "abouts",
+    "displayName": "About"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "blocks": {
+      "type": "dynamiczone",
+      "components": [
+        "sections.hero",
+        "sections.page-header",
+        "sections.introduction",
+        "sections.events-preview",
+        "sections.blogs-preview",
+        "sections.completed-events",
+        "sections.team-grid"
+      ]
+    }
+  }
+}

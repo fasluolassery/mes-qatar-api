@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_sections_blogs_previews",
+  "info": {
+    "displayName": "Blogs Preview"
+  },
+  "options": {},
+  "attributes": {
+    "tagline": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "maxDisplay": {
+      "type": "integer",
+      "required": true,
+      "default": 3,
+      "min": 1,
+      "max": 5
+    }
+  },
+  "config": {}
+}
