@@ -1,0 +1,13 @@
+/**
+ * blogs-page router
+ */
+
+import { factories } from '@strapi/strapi';
+
+export default factories.createCoreRouter('api::blogs-page.blogs-page', {
+  config: {
+    find: {
+      auth: false,
+    },
+  },
+});
