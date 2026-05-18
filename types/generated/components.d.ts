@@ -80,17 +80,8 @@ export interface SectionsBlogsPreview extends Struct.ComponentSchema {
     displayName: 'Blogs Preview';
   };
   attributes: {
+    button: Schema.Attribute.Component<'elements.link', false>;
     description: Schema.Attribute.Text;
-    maxDisplay: Schema.Attribute.Integer &
-      Schema.Attribute.Required &
-      Schema.Attribute.SetMinMax<
-        {
-          max: 5;
-          min: 1;
-        },
-        number
-      > &
-      Schema.Attribute.DefaultTo<3>;
     tagline: Schema.Attribute.String;
     title: Schema.Attribute.String & Schema.Attribute.Required;
   };
@@ -104,16 +95,6 @@ export interface SectionsCompletedEvents extends Struct.ComponentSchema {
   };
   attributes: {
     description: Schema.Attribute.Text;
-    maxDisplay: Schema.Attribute.Integer &
-      Schema.Attribute.Required &
-      Schema.Attribute.SetMinMax<
-        {
-          max: 6;
-          min: 1;
-        },
-        number
-      > &
-      Schema.Attribute.DefaultTo<3>;
     tagline: Schema.Attribute.String;
     title: Schema.Attribute.String;
   };
@@ -126,16 +107,6 @@ export interface SectionsEventsPreview extends Struct.ComponentSchema {
   };
   attributes: {
     description: Schema.Attribute.Text;
-    maxDisplay: Schema.Attribute.Integer &
-      Schema.Attribute.Required &
-      Schema.Attribute.SetMinMax<
-        {
-          max: 5;
-          min: 1;
-        },
-        number
-      > &
-      Schema.Attribute.DefaultTo<3>;
     tagline: Schema.Attribute.String;
     title: Schema.Attribute.String;
   };

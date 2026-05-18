@@ -15,12 +15,10 @@
     "description": {
       "type": "text"
     },
-    "maxDisplay": {
-      "type": "integer",
-      "required": true,
-      "default": 3,
-      "min": 1,
-      "max": 5
+    "button": {
+      "type": "component",
+      "component": "elements.link",
+      "repeatable": false
     }
   },
   "config": {}
