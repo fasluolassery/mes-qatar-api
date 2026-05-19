@@ -97,6 +97,7 @@ export interface SectionsCompletedEvents extends Struct.ComponentSchema {
     description: Schema.Attribute.Text;
     tagline: Schema.Attribute.String;
     title: Schema.Attribute.String;
+    viewAllButton: Schema.Attribute.Component<'elements.link', false>;
   };
 }
 
@@ -109,6 +110,7 @@ export interface SectionsEventsPreview extends Struct.ComponentSchema {
     description: Schema.Attribute.Text;
     tagline: Schema.Attribute.String;
     title: Schema.Attribute.String;
+    viewAllButton: Schema.Attribute.Component<'elements.link', false>;
   };
 }
 

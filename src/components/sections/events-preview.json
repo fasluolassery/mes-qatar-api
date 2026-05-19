@@ -13,6 +13,11 @@
     },
     "description": {
       "type": "text"
+    },
+    "viewAllButton": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.link"
     }
   },
   "config": {}
