@@ -18,6 +18,7 @@ const config: Core.Config.Middlewares = [
     },
   },
   'strapi::cors',
+  'global::cache',
   'strapi::poweredBy',
   'strapi::query',
   'strapi::body',
