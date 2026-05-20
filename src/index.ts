@@ -1,20 +1,31 @@
-// import type { Core } from '@strapi/strapi';
+import type { Core } from '@strapi/strapi';
+import { invalidateByContentType } from './middlewares/cache';
+
+const CACHED_UIDS = [
+  'api::blog.blog',
+  'api::global.global',
+  'api::home.home',
+  'api::about.about',
+  'api::member.member',
+] as const;
 
 export default {
-  /**
-   * An asynchronous register function that runs before
-   * your application is initialized.
-   *
-   * This gives you an opportunity to extend code.
-   */
-  register(/* { strapi }: { strapi: Core.Strapi } */) {},
+  register(_ctx: { strapi: Core.Strapi }) {},
 
-  /**
-   * An asynchronous bootstrap function that runs before
-   * your application gets started.
-   *
-   * This gives you an opportunity to set up your data model,
-   * run jobs, or perform some special logic.
-   */
-  bootstrap(/* { strapi }: { strapi: Core.Strapi } */) {},
+  bootstrap({ strapi }: { strapi: Core.Strapi }) {
+    for (const uid of CACHED_UIDS) {
+      strapi.db.lifecycles.subscribe({
+        models: [uid],
+
+        async afterCreate()       { await invalidateByContentType(uid); },
+        async afterCreateMany()   { await invalidateByContentType(uid); },
+        async afterUpdate()       { await invalidateByContentType(uid); },
+        async afterUpdateMany()   { await invalidateByContentType(uid); },
+        async afterDelete()       { await invalidateByContentType(uid); },
+        async afterDeleteMany()   { await invalidateByContentType(uid); },
+      });
+    }
+
+    strapi.log.info('[Cache] Redis cache lifecycle hooks registered');
+  },
 };
