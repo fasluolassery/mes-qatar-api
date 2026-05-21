@@ -1,0 +1,34 @@
+{
+  "collectionName": "components_shared_meta_socials",
+  "info": {
+    "displayName": "Meta Social",
+    "icon": "share-alt",
+    "description": "Customized sharing card details for specific social networks"
+  },
+  "options": {},
+  "attributes": {
+    "socialNetwork": {
+      "type": "enumeration",
+      "enum": [
+        "Facebook",
+        "Twitter"
+      ],
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "string",
+      "required": true
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  }
+}

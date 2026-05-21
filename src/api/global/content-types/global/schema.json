@@ -27,6 +27,11 @@
       "type": "component",
       "component": "layout.footer",
       "repeatable": false
+    },
+    "seo": {
+      "type": "component",
+      "component": "shared.seo",
+      "repeatable": false
     }
   }
 }
