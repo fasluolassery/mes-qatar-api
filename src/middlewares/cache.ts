@@ -1,6 +1,6 @@
 import { Redis } from "@upstash/redis";
 
-const CACHE_TTL = 86400; // 24 hours
+const CACHE_TTL = parseInt(process.env.CACHE_TTL || "86400", 10);
 const CACHE_PREFIX = "strapi:cache:";
 
 // Maps content type UIDs to the URL prefix they affect
@@ -47,6 +47,47 @@ export async function invalidateByContentType(uid: string): Promise<void> {
   } catch (err) {
     strapi.log.error(`[Cache] Invalidation error for ${uid}: ${err}`);
   }
+}
+
+/**
+ * Manually clears all cached items starting with CACHE_PREFIX.
+ */
+export async function clearAllCache(): Promise<number> {
+  const client = getClient();
+  if (!client) return 0;
+
+  try {
+    const pattern = `${CACHE_PREFIX}*`;
+    const keys = await client.keys(pattern);
+    if (keys.length > 0) {
+      await client.del(...(keys as [string, ...string[]]));
+      return keys.length;
+    }
+  } catch (err) {
+    strapi.log.error(`[Cache] Clear all error: ${err}`);
+  }
+  return 0;
+}
+
+/**
+ * Manually clears cached items starting with a specific path.
+ */
+export async function clearCacheByPath(path: string): Promise<number> {
+  const client = getClient();
+  if (!client) return 0;
+
+  try {
+    const cleanPath = path.startsWith('/api') ? path : `/api${path}`;
+    const pattern = `${CACHE_PREFIX}${cleanPath}*`;
+    const keys = await client.keys(pattern);
+    if (keys.length > 0) {
+      await client.del(...(keys as [string, ...string[]]));
+      return keys.length;
+    }
+  } catch (err) {
+    strapi.log.error(`[Cache] Clear path error for ${path}: ${err}`);
+  }
+  return 0;
 }
 
 /**
