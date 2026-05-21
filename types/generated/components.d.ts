@@ -169,6 +169,42 @@ export interface SectionsTeamGrid extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedMetaSocial extends Struct.ComponentSchema {
+  collectionName: 'components_shared_meta_socials';
+  info: {
+    description: 'Customized sharing card details for specific social networks';
+    displayName: 'Meta Social';
+    icon: 'share-alt';
+  };
+  attributes: {
+    description: Schema.Attribute.String & Schema.Attribute.Required;
+    image: Schema.Attribute.Media<'images'>;
+    socialNetwork: Schema.Attribute.Enumeration<['Facebook', 'Twitter']> &
+      Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface SharedSeo extends Struct.ComponentSchema {
+  collectionName: 'components_shared_seos';
+  info: {
+    description: 'Enterprise-grade Search Engine Optimization settings';
+    displayName: 'SEO';
+    icon: 'search';
+  };
+  attributes: {
+    canonicalURL: Schema.Attribute.String;
+    keywords: Schema.Attribute.String;
+    metaDescription: Schema.Attribute.Text & Schema.Attribute.Required;
+    metaImage: Schema.Attribute.Media<'images'>;
+    metaRobots: Schema.Attribute.String;
+    metaSocial: Schema.Attribute.Component<'shared.meta-social', true>;
+    metaTitle: Schema.Attribute.String & Schema.Attribute.Required;
+    metaViewport: Schema.Attribute.String;
+    structuredData: Schema.Attribute.JSON;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
@@ -185,6 +221,8 @@ declare module '@strapi/strapi' {
       'sections.introduction': SectionsIntroduction;
       'sections.page-header': SectionsPageHeader;
       'sections.team-grid': SectionsTeamGrid;
+      'shared.meta-social': SharedMetaSocial;
+      'shared.seo': SharedSeo;
     }
   }
 }
