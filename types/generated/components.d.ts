@@ -205,6 +205,23 @@ export interface SharedSeo extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedTheme extends Struct.ComponentSchema {
+  collectionName: 'components_shared_themes';
+  info: {
+    description: 'Global style settings for buttons and colors';
+    displayName: 'Theme';
+    icon: 'brush';
+  };
+  attributes: {
+    outlineButtonBorderColor: Schema.Attribute.String;
+    outlineButtonTextColor: Schema.Attribute.String;
+    primaryButtonBgColor: Schema.Attribute.String;
+    primaryButtonTextColor: Schema.Attribute.String;
+    secondaryButtonBgColor: Schema.Attribute.String;
+    secondaryButtonTextColor: Schema.Attribute.String;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
@@ -223,6 +240,7 @@ declare module '@strapi/strapi' {
       'sections.team-grid': SectionsTeamGrid;
       'shared.meta-social': SharedMetaSocial;
       'shared.seo': SharedSeo;
+      'shared.theme': SharedTheme;
     }
   }
 }

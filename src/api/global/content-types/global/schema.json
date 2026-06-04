@@ -32,6 +32,11 @@
       "type": "component",
       "component": "shared.seo",
       "repeatable": false
+    },
+    "theme": {
+      "type": "component",
+      "component": "shared.theme",
+      "repeatable": false
     }
   }
 }
