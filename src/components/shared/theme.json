@@ -24,6 +24,24 @@
     },
     "outlineButtonTextColor": {
       "type": "string"
+    },
+    "navbarBgColor": {
+      "type": "string"
+    },
+    "navbarLinkColor": {
+      "type": "string"
+    },
+    "navbarLinkHoverColor": {
+      "type": "string"
+    },
+    "footerBgColor": {
+      "type": "string"
+    },
+    "footerTextColor": {
+      "type": "string"
+    },
+    "footerLinkHoverColor": {
+      "type": "string"
     }
   }
 }

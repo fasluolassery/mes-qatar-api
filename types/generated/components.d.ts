@@ -213,6 +213,12 @@ export interface SharedTheme extends Struct.ComponentSchema {
     icon: 'brush';
   };
   attributes: {
+    footerBgColor: Schema.Attribute.String;
+    footerLinkHoverColor: Schema.Attribute.String;
+    footerTextColor: Schema.Attribute.String;
+    navbarBgColor: Schema.Attribute.String;
+    navbarLinkColor: Schema.Attribute.String;
+    navbarLinkHoverColor: Schema.Attribute.String;
     outlineButtonBorderColor: Schema.Attribute.String;
     outlineButtonTextColor: Schema.Attribute.String;
     primaryButtonBgColor: Schema.Attribute.String;
