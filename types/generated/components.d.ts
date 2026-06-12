@@ -208,23 +208,78 @@ export interface SharedSeo extends Struct.ComponentSchema {
 export interface SharedTheme extends Struct.ComponentSchema {
   collectionName: 'components_shared_themes';
   info: {
-    description: 'Global style settings for buttons and colors';
+    description: 'Global style settings grouped by section';
     displayName: 'Theme';
     icon: 'brush';
   };
   attributes: {
-    footerBgColor: Schema.Attribute.String;
-    footerLinkHoverColor: Schema.Attribute.String;
-    footerTextColor: Schema.Attribute.String;
-    navbarBgColor: Schema.Attribute.String;
-    navbarLinkColor: Schema.Attribute.String;
-    navbarLinkHoverColor: Schema.Attribute.String;
+    buttons: Schema.Attribute.Component<'shared.theme-buttons', false>;
+    footer: Schema.Attribute.Component<'shared.theme-footer', false>;
+    hero: Schema.Attribute.Component<'shared.theme-hero', false>;
+    navbar: Schema.Attribute.Component<'shared.theme-navbar', false>;
+  };
+}
+
+export interface SharedThemeButtons extends Struct.ComponentSchema {
+  collectionName: 'components_shared_theme_buttons';
+  info: {
+    description: 'Button styling colors';
+    displayName: 'ThemeButtons';
+    icon: 'hand-point-up';
+  };
+  attributes: {
     outlineButtonBorderColor: Schema.Attribute.String;
     outlineButtonTextColor: Schema.Attribute.String;
     primaryButtonBgColor: Schema.Attribute.String;
     primaryButtonTextColor: Schema.Attribute.String;
     secondaryButtonBgColor: Schema.Attribute.String;
     secondaryButtonTextColor: Schema.Attribute.String;
+  };
+}
+
+export interface SharedThemeFooter extends Struct.ComponentSchema {
+  collectionName: 'components_shared_theme_footers';
+  info: {
+    description: 'Footer styling colors';
+    displayName: 'ThemeFooter';
+    icon: 'layout';
+  };
+  attributes: {
+    footerBgColor: Schema.Attribute.String;
+    footerLinkHoverColor: Schema.Attribute.String;
+    footerTextColor: Schema.Attribute.String;
+  };
+}
+
+export interface SharedThemeHero extends Struct.ComponentSchema {
+  collectionName: 'components_shared_theme_heros';
+  info: {
+    description: 'Hero styling colors';
+    displayName: 'ThemeHero';
+    icon: 'image';
+  };
+  attributes: {
+    heroDescriptionColor: Schema.Attribute.String;
+    heroOverlayEndColor: Schema.Attribute.String;
+    heroOverlayStartColor: Schema.Attribute.String;
+    heroStatValueColor: Schema.Attribute.String;
+    heroTaglineColor: Schema.Attribute.String;
+    heroTitleColor: Schema.Attribute.String;
+    heroTitleHighlightColor: Schema.Attribute.String;
+  };
+}
+
+export interface SharedThemeNavbar extends Struct.ComponentSchema {
+  collectionName: 'components_shared_theme_navbars';
+  info: {
+    description: 'Navbar styling colors';
+    displayName: 'ThemeNavbar';
+    icon: 'align-justify';
+  };
+  attributes: {
+    navbarBgColor: Schema.Attribute.String;
+    navbarLinkColor: Schema.Attribute.String;
+    navbarLinkHoverColor: Schema.Attribute.String;
     siteNameColor: Schema.Attribute.String;
     subTextColor: Schema.Attribute.String;
   };
@@ -249,6 +304,10 @@ declare module '@strapi/strapi' {
       'shared.meta-social': SharedMetaSocial;
       'shared.seo': SharedSeo;
       'shared.theme': SharedTheme;
+      'shared.theme-buttons': SharedThemeButtons;
+      'shared.theme-footer': SharedThemeFooter;
+      'shared.theme-hero': SharedThemeHero;
+      'shared.theme-navbar': SharedThemeNavbar;
     }
   }
 }

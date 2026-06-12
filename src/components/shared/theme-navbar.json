@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_shared_theme_navbars",
+  "info": {
+    "displayName": "ThemeNavbar",
+    "icon": "align-justify",
+    "description": "Navbar styling colors"
+  },
+  "options": {},
+  "attributes": {
+    "navbarBgColor": {
+      "type": "string"
+    },
+    "navbarLinkColor": {
+      "type": "string"
+    },
+    "navbarLinkHoverColor": {
+      "type": "string"
+    },
+    "siteNameColor": {
+      "type": "string"
+    },
+    "subTextColor": {
+      "type": "string"
+    }
+  }
+}

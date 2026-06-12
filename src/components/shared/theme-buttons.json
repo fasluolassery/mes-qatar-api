@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_shared_theme_buttons",
+  "info": {
+    "displayName": "ThemeButtons",
+    "icon": "hand-point-up",
+    "description": "Button styling colors"
+  },
+  "options": {},
+  "attributes": {
+    "primaryButtonBgColor": {
+      "type": "string"
+    },
+    "primaryButtonTextColor": {
+      "type": "string"
+    },
+    "secondaryButtonBgColor": {
+      "type": "string"
+    },
+    "secondaryButtonTextColor": {
+      "type": "string"
+    },
+    "outlineButtonBorderColor": {
+      "type": "string"
+    },
+    "outlineButtonTextColor": {
+      "type": "string"
+    }
+  }
+}

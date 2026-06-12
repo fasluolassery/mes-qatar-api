@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_shared_theme_heros",
+  "info": {
+    "displayName": "ThemeHero",
+    "icon": "image",
+    "description": "Hero styling colors"
+  },
+  "options": {},
+  "attributes": {
+    "heroTitleColor": {
+      "type": "string"
+    },
+    "heroTitleHighlightColor": {
+      "type": "string"
+    },
+    "heroTaglineColor": {
+      "type": "string"
+    },
+    "heroDescriptionColor": {
+      "type": "string"
+    },
+    "heroStatValueColor": {
+      "type": "string"
+    },
+    "heroOverlayStartColor": {
+      "type": "string"
+    },
+    "heroOverlayEndColor": {
+      "type": "string"
+    }
+  }
+}

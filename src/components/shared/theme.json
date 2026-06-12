@@ -3,51 +3,29 @@
   "info": {
     "displayName": "Theme",
     "icon": "brush",
-    "description": "Global style settings for buttons and colors"
+    "description": "Global style settings grouped by section"
   },
   "options": {},
   "attributes": {
-    "primaryButtonBgColor": {
-      "type": "string"
+    "buttons": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.theme-buttons"
     },
-    "primaryButtonTextColor": {
-      "type": "string"
+    "navbar": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.theme-navbar"
     },
-    "secondaryButtonBgColor": {
-      "type": "string"
+    "hero": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.theme-hero"
     },
-    "secondaryButtonTextColor": {
-      "type": "string"
-    },
-    "outlineButtonBorderColor": {
-      "type": "string"
-    },
-    "outlineButtonTextColor": {
-      "type": "string"
-    },
-    "navbarBgColor": {
-      "type": "string"
-    },
-    "navbarLinkColor": {
-      "type": "string"
-    },
-    "navbarLinkHoverColor": {
-      "type": "string"
-    },
-    "footerBgColor": {
-      "type": "string"
-    },
-    "footerTextColor": {
-      "type": "string"
-    },
-    "footerLinkHoverColor": {
-      "type": "string"
-    },
-    "siteNameColor": {
-      "type": "string"
-    },
-    "subTextColor": {
-      "type": "string"
+    "footer": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.theme-footer"
     }
   }
 }
