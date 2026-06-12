@@ -225,6 +225,8 @@ export interface SharedTheme extends Struct.ComponentSchema {
     primaryButtonTextColor: Schema.Attribute.String;
     secondaryButtonBgColor: Schema.Attribute.String;
     secondaryButtonTextColor: Schema.Attribute.String;
+    siteNameColor: Schema.Attribute.String;
+    subTextColor: Schema.Attribute.String;
   };
 }
 
