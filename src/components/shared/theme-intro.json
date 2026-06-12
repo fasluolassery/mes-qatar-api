@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_shared_theme_intros",
+  "info": {
+    "displayName": "ThemeIntro",
+    "icon": "paragraph",
+    "description": "Introduction section styling colors"
+  },
+  "options": {},
+  "attributes": {
+    "introBgColor": {
+      "type": "string"
+    },
+    "introTaglineColor": {
+      "type": "string"
+    },
+    "introTitleColor": {
+      "type": "string"
+    },
+    "introSubtitleColor": {
+      "type": "string"
+    },
+    "introSubtitleLineColor": {
+      "type": "string"
+    },
+    "introDescriptionColor": {
+      "type": "string"
+    },
+    "introImageFrameColor": {
+      "type": "string"
+    }
+  }
+}

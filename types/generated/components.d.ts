@@ -216,6 +216,7 @@ export interface SharedTheme extends Struct.ComponentSchema {
     buttons: Schema.Attribute.Component<'shared.theme-buttons', false>;
     footer: Schema.Attribute.Component<'shared.theme-footer', false>;
     hero: Schema.Attribute.Component<'shared.theme-hero', false>;
+    intro: Schema.Attribute.Component<'shared.theme-intro', false>;
     navbar: Schema.Attribute.Component<'shared.theme-navbar', false>;
   };
 }
@@ -269,6 +270,24 @@ export interface SharedThemeHero extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedThemeIntro extends Struct.ComponentSchema {
+  collectionName: 'components_shared_theme_intros';
+  info: {
+    description: 'Introduction section styling colors';
+    displayName: 'ThemeIntro';
+    icon: 'paragraph';
+  };
+  attributes: {
+    introBgColor: Schema.Attribute.String;
+    introDescriptionColor: Schema.Attribute.String;
+    introImageFrameColor: Schema.Attribute.String;
+    introSubtitleColor: Schema.Attribute.String;
+    introSubtitleLineColor: Schema.Attribute.String;
+    introTaglineColor: Schema.Attribute.String;
+    introTitleColor: Schema.Attribute.String;
+  };
+}
+
 export interface SharedThemeNavbar extends Struct.ComponentSchema {
   collectionName: 'components_shared_theme_navbars';
   info: {
@@ -307,6 +326,7 @@ declare module '@strapi/strapi' {
       'shared.theme-buttons': SharedThemeButtons;
       'shared.theme-footer': SharedThemeFooter;
       'shared.theme-hero': SharedThemeHero;
+      'shared.theme-intro': SharedThemeIntro;
       'shared.theme-navbar': SharedThemeNavbar;
     }
   }
