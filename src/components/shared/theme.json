@@ -27,6 +27,16 @@
       "repeatable": false,
       "component": "shared.theme-intro"
     },
+    "events": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.theme-events"
+    },
+    "completedEvents": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.theme-completed-events"
+    },
     "footer": {
       "type": "component",
       "repeatable": false,

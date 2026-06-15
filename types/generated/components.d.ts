@@ -214,6 +214,11 @@ export interface SharedTheme extends Struct.ComponentSchema {
   };
   attributes: {
     buttons: Schema.Attribute.Component<'shared.theme-buttons', false>;
+    completedEvents: Schema.Attribute.Component<
+      'shared.theme-completed-events',
+      false
+    >;
+    events: Schema.Attribute.Component<'shared.theme-events', false>;
     footer: Schema.Attribute.Component<'shared.theme-footer', false>;
     hero: Schema.Attribute.Component<'shared.theme-hero', false>;
     intro: Schema.Attribute.Component<'shared.theme-intro', false>;
@@ -235,6 +240,48 @@ export interface SharedThemeButtons extends Struct.ComponentSchema {
     primaryButtonTextColor: Schema.Attribute.String;
     secondaryButtonBgColor: Schema.Attribute.String;
     secondaryButtonTextColor: Schema.Attribute.String;
+  };
+}
+
+export interface SharedThemeCompletedEvents extends Struct.ComponentSchema {
+  collectionName: 'components_shared_theme_completed_events';
+  info: {
+    description: 'Completed events section styling colors';
+    displayName: 'ThemeCompletedEvents';
+    icon: 'check';
+  };
+  attributes: {
+    completedAccentColor: Schema.Attribute.String;
+    completedBgColor: Schema.Attribute.String;
+    completedDescriptionColor: Schema.Attribute.String;
+    completedTaglineColor: Schema.Attribute.String;
+    completedTitleColor: Schema.Attribute.String;
+  };
+}
+
+export interface SharedThemeEvents extends Struct.ComponentSchema {
+  collectionName: 'components_shared_theme_events';
+  info: {
+    description: 'Events section styling colors';
+    displayName: 'ThemeEvents';
+    icon: 'calendar';
+  };
+  attributes: {
+    cardBadgeAccentColor: Schema.Attribute.String;
+    cardBadgeBgColor: Schema.Attribute.String;
+    cardBadgeBorderColor: Schema.Attribute.String;
+    cardBgColor: Schema.Attribute.String;
+    cardBorderColor: Schema.Attribute.String;
+    cardDescriptionColor: Schema.Attribute.String;
+    cardIconColor: Schema.Attribute.String;
+    cardTitleColor: Schema.Attribute.String;
+    cardTitleHoverColor: Schema.Attribute.String;
+    eventsBgColor: Schema.Attribute.String;
+    eventsDescriptionColor: Schema.Attribute.String;
+    eventsSplitBgColor: Schema.Attribute.String;
+    eventsTaglineColor: Schema.Attribute.String;
+    eventsTitleColor: Schema.Attribute.String;
+    eventsTitleHighlightColor: Schema.Attribute.String;
   };
 }
 
@@ -324,6 +371,8 @@ declare module '@strapi/strapi' {
       'shared.seo': SharedSeo;
       'shared.theme': SharedTheme;
       'shared.theme-buttons': SharedThemeButtons;
+      'shared.theme-completed-events': SharedThemeCompletedEvents;
+      'shared.theme-events': SharedThemeEvents;
       'shared.theme-footer': SharedThemeFooter;
       'shared.theme-hero': SharedThemeHero;
       'shared.theme-intro': SharedThemeIntro;

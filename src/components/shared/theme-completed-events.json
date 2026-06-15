@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_shared_theme_completed_events",
+  "info": {
+    "displayName": "ThemeCompletedEvents",
+    "icon": "check",
+    "description": "Completed events section styling colors"
+  },
+  "options": {},
+  "attributes": {
+    "completedBgColor": {
+      "type": "string"
+    },
+    "completedTaglineColor": {
+      "type": "string"
+    },
+    "completedTitleColor": {
+      "type": "string"
+    },
+    "completedDescriptionColor": {
+      "type": "string"
+    },
+    "completedAccentColor": {
+      "type": "string"
+    }
+  }
+}

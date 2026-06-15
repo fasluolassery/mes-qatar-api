@@ -1,0 +1,56 @@
+{
+  "collectionName": "components_shared_theme_events",
+  "info": {
+    "displayName": "ThemeEvents",
+    "icon": "calendar",
+    "description": "Events section styling colors"
+  },
+  "options": {},
+  "attributes": {
+    "eventsBgColor": {
+      "type": "string"
+    },
+    "eventsSplitBgColor": {
+      "type": "string"
+    },
+    "eventsTaglineColor": {
+      "type": "string"
+    },
+    "eventsTitleColor": {
+      "type": "string"
+    },
+    "eventsTitleHighlightColor": {
+      "type": "string"
+    },
+    "eventsDescriptionColor": {
+      "type": "string"
+    },
+    "cardBgColor": {
+      "type": "string"
+    },
+    "cardBorderColor": {
+      "type": "string"
+    },
+    "cardTitleColor": {
+      "type": "string"
+    },
+    "cardTitleHoverColor": {
+      "type": "string"
+    },
+    "cardDescriptionColor": {
+      "type": "string"
+    },
+    "cardBadgeBgColor": {
+      "type": "string"
+    },
+    "cardBadgeAccentColor": {
+      "type": "string"
+    },
+    "cardBadgeBorderColor": {
+      "type": "string"
+    },
+    "cardIconColor": {
+      "type": "string"
+    }
+  }
+}
