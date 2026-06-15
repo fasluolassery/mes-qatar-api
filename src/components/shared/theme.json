@@ -42,6 +42,11 @@
       "repeatable": false,
       "component": "shared.theme-blogs"
     },
+    "pageHeader": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.theme-page-header"
+    },
     "footer": {
       "type": "component",
       "repeatable": false,

@@ -20,6 +20,7 @@
     "@strapi/provider-upload-cloudinary": "5.45.1",
     "@strapi/strapi": "5.45.1",
     "@upstash/redis": "^1.38.0",
+    "better-sqlite3": "^12.10.1",
     "pg": "8.20.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",

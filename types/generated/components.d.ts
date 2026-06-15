@@ -224,6 +224,7 @@ export interface SharedTheme extends Struct.ComponentSchema {
     hero: Schema.Attribute.Component<'shared.theme-hero', false>;
     intro: Schema.Attribute.Component<'shared.theme-intro', false>;
     navbar: Schema.Attribute.Component<'shared.theme-navbar', false>;
+    pageHeader: Schema.Attribute.Component<'shared.theme-page-header', false>;
   };
 }
 
@@ -381,6 +382,25 @@ export interface SharedThemeNavbar extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedThemePageHeader extends Struct.ComponentSchema {
+  collectionName: 'components_shared_theme_page_headers';
+  info: {
+    description: 'Page header section styling colors';
+    displayName: 'ThemePageHeader';
+    icon: 'layout';
+  };
+  attributes: {
+    pageHeaderBgColor: Schema.Attribute.String;
+    pageHeaderDescriptionColor: Schema.Attribute.String;
+    pageHeaderPatternColor: Schema.Attribute.String;
+    pageHeaderTaglineBgColor: Schema.Attribute.String;
+    pageHeaderTaglineBorderColor: Schema.Attribute.String;
+    pageHeaderTaglineColor: Schema.Attribute.String;
+    pageHeaderTitleColor: Schema.Attribute.String;
+    pageHeaderTitleHighlightColor: Schema.Attribute.String;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
@@ -408,6 +428,7 @@ declare module '@strapi/strapi' {
       'shared.theme-hero': SharedThemeHero;
       'shared.theme-intro': SharedThemeIntro;
       'shared.theme-navbar': SharedThemeNavbar;
+      'shared.theme-page-header': SharedThemePageHeader;
     }
   }
 }

@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_shared_theme_page_headers",
+  "info": {
+    "displayName": "ThemePageHeader",
+    "icon": "layout",
+    "description": "Page header section styling colors"
+  },
+  "options": {},
+  "attributes": {
+    "pageHeaderBgColor": {
+      "type": "string"
+    },
+    "pageHeaderTaglineColor": {
+      "type": "string"
+    },
+    "pageHeaderTaglineBgColor": {
+      "type": "string"
+    },
+    "pageHeaderTaglineBorderColor": {
+      "type": "string"
+    },
+    "pageHeaderTitleColor": {
+      "type": "string"
+    },
+    "pageHeaderTitleHighlightColor": {
+      "type": "string"
+    },
+    "pageHeaderDescriptionColor": {
+      "type": "string"
+    },
+    "pageHeaderPatternColor": {
+      "type": "string"
+    }
+  }
+}

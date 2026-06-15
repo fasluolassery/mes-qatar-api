@@ -16,6 +16,9 @@ const CONTENT_TYPE_URL_MAP: Record<string, string> = {
 let _redis: Redis | null = null;
 
 function getClient(): Redis | null {
+  if (process.env.DISABLE_REDIS_CACHE === "true" || process.env.NODE_ENV === "development") {
+    return null;
+  }
   const url = process.env.UPSTASH_REDIS_REST_URL;
   const token = process.env.UPSTASH_REDIS_REST_TOKEN;
   if (!url || !token) return null;

@@ -13,6 +13,11 @@ export default {
   register(_ctx: { strapi: Core.Strapi }) {},
 
   bootstrap({ strapi }: { strapi: Core.Strapi }) {
+    if (process.env.DISABLE_REDIS_CACHE === "true" || process.env.NODE_ENV === "development") {
+      strapi.log.info('[Cache] Redis cache lifecycle hooks bypassed in development');
+      return;
+    }
+
     for (const uid of CACHED_UIDS) {
       strapi.db.lifecycles.subscribe({
         models: [uid],
