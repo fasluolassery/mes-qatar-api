@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_shared_theme_teams",
+  "info": {
+    "displayName": "ThemeTeam",
+    "icon": "users",
+    "description": "Executive Committee section colors"
+  },
+  "options": {},
+  "attributes": {
+    "teamBgColor": {
+      "type": "string"
+    },
+    "teamTaglineColor": {
+      "type": "string"
+    },
+    "teamTitleColor": {
+      "type": "string"
+    },
+    "teamDescriptionColor": {
+      "type": "string"
+    },
+    "teamMemberNameColor": {
+      "type": "string"
+    },
+    "teamMemberRoleColor": {
+      "type": "string"
+    },
+    "teamMemberActiveIndicatorColor": {
+      "type": "string"
+    }
+  }
+}

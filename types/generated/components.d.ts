@@ -225,6 +225,7 @@ export interface SharedTheme extends Struct.ComponentSchema {
     intro: Schema.Attribute.Component<'shared.theme-intro', false>;
     navbar: Schema.Attribute.Component<'shared.theme-navbar', false>;
     pageHeader: Schema.Attribute.Component<'shared.theme-page-header', false>;
+    team: Schema.Attribute.Component<'shared.theme-team', false>;
   };
 }
 
@@ -401,6 +402,24 @@ export interface SharedThemePageHeader extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedThemeTeam extends Struct.ComponentSchema {
+  collectionName: 'components_shared_theme_teams';
+  info: {
+    description: 'Executive Committee section colors';
+    displayName: 'ThemeTeam';
+    icon: 'users';
+  };
+  attributes: {
+    teamBgColor: Schema.Attribute.String;
+    teamDescriptionColor: Schema.Attribute.String;
+    teamMemberActiveIndicatorColor: Schema.Attribute.String;
+    teamMemberNameColor: Schema.Attribute.String;
+    teamMemberRoleColor: Schema.Attribute.String;
+    teamTaglineColor: Schema.Attribute.String;
+    teamTitleColor: Schema.Attribute.String;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
@@ -429,6 +448,7 @@ declare module '@strapi/strapi' {
       'shared.theme-intro': SharedThemeIntro;
       'shared.theme-navbar': SharedThemeNavbar;
       'shared.theme-page-header': SharedThemePageHeader;
+      'shared.theme-team': SharedThemeTeam;
     }
   }
 }

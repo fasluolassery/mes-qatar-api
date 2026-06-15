@@ -47,6 +47,11 @@
       "repeatable": false,
       "component": "shared.theme-page-header"
     },
+    "team": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.theme-team"
+    },
     "footer": {
       "type": "component",
       "repeatable": false,
