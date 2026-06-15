@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_shared_theme_details_pages",
+  "info": {
+    "displayName": "ThemeDetailsPage",
+    "icon": "file",
+    "description": "Custom styling for Blog and Event Details pages"
+  },
+  "options": {},
+  "attributes": {
+    "detailsBgColor": {
+      "type": "string"
+    },
+    "detailsTitleColor": {
+      "type": "string"
+    },
+    "detailsTextColor": {
+      "type": "string"
+    },
+    "detailsCardBgColor": {
+      "type": "string"
+    },
+    "detailsAccentColor": {
+      "type": "string"
+    }
+  }
+}

@@ -219,6 +219,7 @@ export interface SharedTheme extends Struct.ComponentSchema {
       'shared.theme-completed-events',
       false
     >;
+    detailsPage: Schema.Attribute.Component<'shared.theme-details-page', false>;
     events: Schema.Attribute.Component<'shared.theme-events', false>;
     footer: Schema.Attribute.Component<'shared.theme-footer', false>;
     hero: Schema.Attribute.Component<'shared.theme-hero', false>;
@@ -288,6 +289,22 @@ export interface SharedThemeCompletedEvents extends Struct.ComponentSchema {
     completedDescriptionColor: Schema.Attribute.String;
     completedTaglineColor: Schema.Attribute.String;
     completedTitleColor: Schema.Attribute.String;
+  };
+}
+
+export interface SharedThemeDetailsPage extends Struct.ComponentSchema {
+  collectionName: 'components_shared_theme_details_pages';
+  info: {
+    description: 'Custom styling for Blog and Event Details pages';
+    displayName: 'ThemeDetailsPage';
+    icon: 'file';
+  };
+  attributes: {
+    detailsAccentColor: Schema.Attribute.String;
+    detailsBgColor: Schema.Attribute.String;
+    detailsCardBgColor: Schema.Attribute.String;
+    detailsTextColor: Schema.Attribute.String;
+    detailsTitleColor: Schema.Attribute.String;
   };
 }
 
@@ -442,6 +459,7 @@ declare module '@strapi/strapi' {
       'shared.theme-blogs': SharedThemeBlogs;
       'shared.theme-buttons': SharedThemeButtons;
       'shared.theme-completed-events': SharedThemeCompletedEvents;
+      'shared.theme-details-page': SharedThemeDetailsPage;
       'shared.theme-events': SharedThemeEvents;
       'shared.theme-footer': SharedThemeFooter;
       'shared.theme-hero': SharedThemeHero;
