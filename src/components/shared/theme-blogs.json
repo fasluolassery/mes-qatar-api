@@ -1,0 +1,65 @@
+{
+  "collectionName": "components_shared_theme_blogs",
+  "info": {
+    "displayName": "ThemeBlogs",
+    "icon": "bulletList",
+    "description": "Blogs section styling colors"
+  },
+  "options": {},
+  "attributes": {
+    "blogsBgColor": {
+      "type": "string"
+    },
+    "blogsTaglineColor": {
+      "type": "string"
+    },
+    "blogsTitleColor": {
+      "type": "string"
+    },
+    "blogsDescriptionColor": {
+      "type": "string"
+    },
+    "cardBgColor": {
+      "type": "string"
+    },
+    "cardBorderColor": {
+      "type": "string"
+    },
+    "cardTitleColor": {
+      "type": "string"
+    },
+    "cardTitleHoverColor": {
+      "type": "string"
+    },
+    "cardDescriptionColor": {
+      "type": "string"
+    },
+    "cardMetaColor": {
+      "type": "string"
+    },
+    "cardBadgeBgColor": {
+      "type": "string"
+    },
+    "cardBadgeTextColor": {
+      "type": "string"
+    },
+    "cardLinkColor": {
+      "type": "string"
+    },
+    "cardLinkHoverColor": {
+      "type": "string"
+    },
+    "cardButtonBgColor": {
+      "type": "string"
+    },
+    "cardButtonTextColor": {
+      "type": "string"
+    },
+    "cardButtonHoverBgColor": {
+      "type": "string"
+    },
+    "cardButtonHoverTextColor": {
+      "type": "string"
+    }
+  }
+}

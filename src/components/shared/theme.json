@@ -37,6 +37,11 @@
       "repeatable": false,
       "component": "shared.theme-completed-events"
     },
+    "blogs": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.theme-blogs"
+    },
     "footer": {
       "type": "component",
       "repeatable": false,

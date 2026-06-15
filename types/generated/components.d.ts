@@ -213,6 +213,7 @@ export interface SharedTheme extends Struct.ComponentSchema {
     icon: 'brush';
   };
   attributes: {
+    blogs: Schema.Attribute.Component<'shared.theme-blogs', false>;
     buttons: Schema.Attribute.Component<'shared.theme-buttons', false>;
     completedEvents: Schema.Attribute.Component<
       'shared.theme-completed-events',
@@ -223,6 +224,35 @@ export interface SharedTheme extends Struct.ComponentSchema {
     hero: Schema.Attribute.Component<'shared.theme-hero', false>;
     intro: Schema.Attribute.Component<'shared.theme-intro', false>;
     navbar: Schema.Attribute.Component<'shared.theme-navbar', false>;
+  };
+}
+
+export interface SharedThemeBlogs extends Struct.ComponentSchema {
+  collectionName: 'components_shared_theme_blogs';
+  info: {
+    description: 'Blogs section styling colors';
+    displayName: 'ThemeBlogs';
+    icon: 'bulletList';
+  };
+  attributes: {
+    blogsBgColor: Schema.Attribute.String;
+    blogsDescriptionColor: Schema.Attribute.String;
+    blogsTaglineColor: Schema.Attribute.String;
+    blogsTitleColor: Schema.Attribute.String;
+    cardBadgeBgColor: Schema.Attribute.String;
+    cardBadgeTextColor: Schema.Attribute.String;
+    cardBgColor: Schema.Attribute.String;
+    cardBorderColor: Schema.Attribute.String;
+    cardButtonBgColor: Schema.Attribute.String;
+    cardButtonHoverBgColor: Schema.Attribute.String;
+    cardButtonHoverTextColor: Schema.Attribute.String;
+    cardButtonTextColor: Schema.Attribute.String;
+    cardDescriptionColor: Schema.Attribute.String;
+    cardLinkColor: Schema.Attribute.String;
+    cardLinkHoverColor: Schema.Attribute.String;
+    cardMetaColor: Schema.Attribute.String;
+    cardTitleColor: Schema.Attribute.String;
+    cardTitleHoverColor: Schema.Attribute.String;
   };
 }
 
@@ -370,6 +400,7 @@ declare module '@strapi/strapi' {
       'shared.meta-social': SharedMetaSocial;
       'shared.seo': SharedSeo;
       'shared.theme': SharedTheme;
+      'shared.theme-blogs': SharedThemeBlogs;
       'shared.theme-buttons': SharedThemeButtons;
       'shared.theme-completed-events': SharedThemeCompletedEvents;
       'shared.theme-events': SharedThemeEvents;
